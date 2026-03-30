@@ -32,6 +32,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 112px;
 }
 
 body {
@@ -43,6 +44,10 @@ body {
     radial-gradient(circle at 16% 0%, rgba(183, 157, 135, 0.18), transparent 24%),
     linear-gradient(180deg, #f8f3ec 0%, #f1e8dd 42%, #ece1d4 100%);
   overflow-x: hidden;
+}
+
+body.menu-open {
+  overflow: hidden;
 }
 
 body::before {
@@ -429,6 +434,7 @@ button {
   display: grid;
   gap: 6px;
   padding: 18px 20px;
+  max-width: min(78%, 520px);
   border-radius: 22px;
   color: #f7f1ea;
   background: linear-gradient(180deg, rgba(20, 15, 10, 0.1), rgba(20, 15, 10, 0.78));
@@ -445,6 +451,7 @@ button {
 .image-overlay strong {
   font-size: 1.12rem;
   line-height: 1.35;
+  text-wrap: pretty;
 }
 
 .stat-strip,
@@ -1282,20 +1289,74 @@ button {
 
 @media (max-width: 640px) {
   .container {
-    width: min(100% - 20px, var(--container));
+    width: min(100% - 24px, var(--container));
   }
 
   .header-inner {
-    min-height: 74px;
+    min-height: 78px;
+    gap: 12px;
+  }
+
+  .brand {
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .brand-mark {
+    width: 44px;
+    height: 44px;
+    flex-basis: 44px;
+  }
+
+  .brand-copy strong {
+    font-size: 0.86rem;
+    letter-spacing: 0.1em;
+  }
+
+  .nav-wrap {
+    top: 84px;
+    left: 12px;
+    right: 12px;
   }
 
   .page-hero,
   .section {
-    padding: 72px 0;
+    padding: 56px 0;
   }
 
   .page-hero--home {
-    padding-top: 18px;
+    padding-top: 12px;
+  }
+
+  .hero-grid,
+  .editorial-grid,
+  .detail-grid,
+  .detail-hero,
+  .contact-grid,
+  .footer-grid {
+    gap: 24px;
+  }
+
+  .hero-copy,
+  .detail-copy,
+  .editorial-copy {
+    gap: 16px;
+  }
+
+  .breadcrumbs {
+    gap: 8px;
+    font-size: 0.78rem;
+  }
+
+  .breadcrumbs span::after {
+    margin-left: 8px;
+  }
+
+  .eyebrow {
+    gap: 8px;
+    padding: 9px 12px;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
   }
 
   .hero-actions,
@@ -1309,7 +1370,8 @@ button {
   }
 
   .display {
-    font-size: clamp(2.6rem, 13vw, 3.6rem);
+    font-size: clamp(2.35rem, 11.6vw, 3.35rem);
+    line-height: 0.98;
   }
 
   .page-title,
@@ -1317,22 +1379,57 @@ button {
   .editorial-copy h2,
   .editorial-copy h3,
   .dark-panel h2 {
-    font-size: clamp(2rem, 9.4vw, 2.85rem);
+    font-size: clamp(1.95rem, 9vw, 2.65rem);
+    line-height: 1.02;
+  }
+
+  .lead,
+  .section-intro,
+  .editorial-copy p,
+  .timeline-item p,
+  .faq-item p,
+  .feature-card p,
+  .story-card p,
+  .list-card p,
+  .spec-card p,
+  .contact-card p,
+  .form-card p,
+  .cta-panel p,
+  .dark-panel p {
+    font-size: 0.98rem;
+    line-height: 1.68;
   }
 
   .image-frame--hero {
-    min-height: 360px;
+    min-height: 320px;
   }
 
   .image-frame--mid {
-    min-height: 260px;
+    min-height: 220px;
   }
 
   .image-frame--short,
   .photo-stack .image-frame:first-child,
   .photo-stack .image-frame:nth-child(2),
   .photo-stack .image-frame:nth-child(3) {
-    min-height: 220px;
+    min-height: 210px;
+  }
+
+  .image-overlay {
+    inset: auto 12px 12px 12px;
+    gap: 8px;
+    padding: 14px 16px;
+    max-width: min(84%, 320px);
+    border-radius: 20px;
+  }
+
+  .image-overlay span {
+    font-size: 0.66rem;
+  }
+
+  .image-overlay strong {
+    font-size: 1rem;
+    line-height: 1.3;
   }
 
   .card,
@@ -1351,6 +1448,26 @@ button {
     padding: 22px;
   }
 
+  .stat-card {
+    min-height: 0;
+  }
+
+  .product-body {
+    gap: 16px;
+    padding: 24px 22px;
+  }
+
+  .product-media {
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1 / 1;
+  }
+
+  .contact-link {
+    min-height: 74px;
+    padding: 16px 18px;
+  }
+
   .spec-row {
     grid-template-columns: 1fr;
     gap: 8px;
@@ -1360,17 +1477,11 @@ button {
     grid-template-columns: 1fr;
   }
 
-  .quick-bar {
-    gap: 8px;
-    padding: 8px;
-  }
-
   .site-footer {
-    padding-bottom: 104px;
+    padding-bottom: 44px;
   }
 
-  .quick-bar__item {
-    min-height: 42px;
-    font-size: 0.78rem;
+  .quick-bar {
+    display: none !important;
   }
 }

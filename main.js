@@ -81,17 +81,27 @@ if (header) {
 }
 
 if (toggle && navWrap) {
+  const setMenuState = (isOpen) => {
+    toggle.setAttribute("aria-expanded", String(isOpen));
+    navWrap.classList.toggle("is-open", isOpen);
+    document.body.classList.toggle("menu-open", isOpen);
+  };
+
   toggle.addEventListener("click", () => {
     const expanded = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", String(!expanded));
-    navWrap.classList.toggle("is-open", !expanded);
+    setMenuState(!expanded);
   });
 
   navWrap.querySelectorAll("a").forEach((link) => {
     link.addEventListener("click", () => {
-      toggle.setAttribute("aria-expanded", "false");
-      navWrap.classList.remove("is-open");
+      setMenuState(false);
     });
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 860) {
+      setMenuState(false);
+    }
   });
 }
 
