@@ -388,6 +388,12 @@ button {
   align-content: start;
 }
 
+.hero-grid--home > .stat-strip,
+.detail-hero > .fact-grid {
+  grid-column: 1 / 2;
+  margin-top: 0;
+}
+
 .media-stack,
 .gallery-grid,
 .photo-stack {
@@ -424,6 +430,18 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center;
+}
+
+.image-focus-lower img {
+  object-position: center 68%;
+}
+
+.image-focus-center-low img {
+  object-position: center 58%;
+}
+
+.image-focus-right img {
+  object-position: 62% center;
 }
 
 .image-frame--hero {
@@ -1355,7 +1373,7 @@ button {
 
   .page-hero,
   .section {
-    padding: 56px 0;
+    padding: 48px 0;
   }
 
   .page-hero--home {
@@ -1368,13 +1386,13 @@ button {
   .detail-hero,
   .contact-grid,
   .footer-grid {
-    gap: 24px;
+    gap: 22px;
   }
 
   .hero-copy,
   .detail-copy,
   .editorial-copy {
-    gap: 16px;
+    gap: 15px;
   }
 
   .breadcrumbs {
@@ -1404,7 +1422,7 @@ button {
   }
 
   .display {
-    font-size: clamp(2.35rem, 11.6vw, 3.35rem);
+    font-size: clamp(2.18rem, 10.8vw, 3rem);
     line-height: 0.98;
   }
 
@@ -1413,8 +1431,9 @@ button {
   .editorial-copy h2,
   .editorial-copy h3,
   .dark-panel h2 {
-    font-size: clamp(1.95rem, 9vw, 2.65rem);
-    line-height: 1.02;
+    font-size: clamp(1.8rem, 8.1vw, 2.45rem);
+    line-height: 1.05;
+    text-wrap: balance;
   }
 
   .lead,
@@ -1430,40 +1449,41 @@ button {
   .form-card p,
   .cta-panel p,
   .dark-panel p {
-    font-size: 0.98rem;
-    line-height: 1.68;
+    font-size: 0.96rem;
+    line-height: 1.64;
   }
 
   .image-frame--hero {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 16 / 10;
   }
 
-  .image-frame--mid {
-    aspect-ratio: 1 / 1;
+  .image-frame--mid,
+  .product-media {
+    aspect-ratio: 16 / 10;
   }
 
   .image-frame--short,
   .photo-stack .image-frame:first-child,
   .photo-stack .image-frame:nth-child(2),
   .photo-stack .image-frame:nth-child(3) {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 16 / 10;
   }
 
   .image-overlay {
     inset: auto 12px 12px 12px;
-    gap: 8px;
-    padding: 14px 16px;
-    max-width: min(84%, 320px);
-    border-radius: 20px;
+    gap: 6px;
+    padding: 12px 14px;
+    max-width: none;
+    border-radius: 18px;
   }
 
   .image-overlay span {
-    font-size: 0.66rem;
+    font-size: 0.62rem;
   }
 
   .image-overlay strong {
-    font-size: 1rem;
-    line-height: 1.3;
+    font-size: 0.96rem;
+    line-height: 1.28;
   }
 
   .card,
@@ -1495,18 +1515,30 @@ button {
     padding: 24px 22px;
   }
 
-  .product-media {
-    aspect-ratio: 1 / 1;
+  .contact-link {
+    min-height: 0;
+    padding: 16px 18px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  .contact-link {
-    min-height: 74px;
-    padding: 16px 18px;
+  .contact-link span {
+    align-self: flex-start;
   }
 
   .spec-row {
     grid-template-columns: 1fr;
     gap: 8px;
+  }
+
+  .faq-item summary {
+    align-items: flex-start;
+    padding: 20px 22px;
+    font-size: 0.96rem;
+  }
+
+  .faq-item p {
+    padding: 0 22px 22px;
   }
 
   .footer-links {
