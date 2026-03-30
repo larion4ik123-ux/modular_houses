@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Контакты Modular Houses: телефон, email, Telegram и форма связи для подбора модели модульного дома."
+    />
+    <title>Контакты — Modular Houses</title>
+    <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <div class="site-shell">
+      <header class="site-header">
+        <div class="container header-inner">
+          <a class="brand" href="./index.html" aria-label="Modular Houses">
+            <span class="brand-mark">MH</span>
+            <span class="brand-copy">
+              <strong>Modular Houses</strong>
+              <span>Частные дома</span>
+            </span>
+          </a>
+          <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Открыть меню">
+            <span></span>
+          </button>
+          <div class="nav-wrap">
+            <nav class="site-nav">
+              <a href="./index.html">Главная</a>
+              <a href="./catalog.html">Каталог</a>
+              <a href="./technologies.html">Технологии</a>
+              <a href="./complectation.html">Комплектация</a>
+              <a href="./about.html">О компании</a>
+              <a class="is-active" href="./contacts.html">Контакты</a>
+              <a href="./faq.html">FAQ</a>
+            </nav>
+            <div class="header-actions">
+              <button class="btn btn--line" type="button" data-copy-phone="+7 999 888 5566">Позвонить</button>
+              <a class="btn btn--dark" href="#request-form">Оставить заявку</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="container hero-grid">
+            <div class="hero-copy" data-reveal>
+              <div class="breadcrumbs">
+                <span><a href="./index.html">Главная</a></span>
+                <span>Контакты</span>
+              </div>
+              <span class="eyebrow">Связаться с нами</span>
+              <h1 class="page-title">Оставьте заявку, и мы подберем дом под ваш участок</h1>
+              <p class="lead">
+                Самый быстрый путь — отправить нам вводные по участку, площади и желаемому формату проживания. Если
+                уже есть понравившаяся модель, просто укажите ее в форме. Если нужен дом больше базовой версии, сразу
+                напишите, сколько модулей хотите объединить в один проект.
+              </p>
+            </div>
+
+            <figure class="image-frame image-frame--hero" data-reveal>
+              <img src="./assets/images/source-refresh/1741331809474-999999.jpg" alt="Модульный дом на зеленом участке" />
+              <figcaption class="image-overlay">
+                <span>Подбор дома</span>
+                <strong>Поможем выбрать модель, комплектацию и формат дома под ваш участок.</strong>
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section class="section section--tight">
+          <div class="container contact-grid">
+            <div class="contact-cards">
+              <article class="contact-card" data-reveal>
+                <span class="eyebrow">Прямые контакты</span>
+                <h3>Быстрое общение</h3>
+                <p>Если удобно обсудить проект сразу, используйте любой из каналов ниже. Мы работаем с частными запросами по всей России.</p>
+                <div class="contact-cards">
+                  <a class="contact-link" href="tel:+79998885566">
+                    <strong>+7 999 888 5566</strong>
+                    <span>Телефон</span>
+                  </a>
+                  <a class="contact-link" href="https://t.me/+79998885566">
+                    <strong>Telegram</strong>
+                    <span>Быстрый диалог</span>
+                  </a>
+                  <a class="contact-link" href="mailto:larion4ik1999@gmail.com">
+                    <strong>larion4ik1999@gmail.com</strong>
+                    <span>Email</span>
+                  </a>
+                </div>
+              </article>
+
+              <article class="contact-card" data-reveal>
+                <span class="eyebrow">Что подготовить</span>
+                <h3>Чтобы расчет был точнее</h3>
+                <ul class="bullet-list">
+                  <li>Как вы планируете использовать дом: для себя, для гостей или для долгого проживания</li>
+                  <li>Площадь, которая кажется комфортной</li>
+                  <li>Сколько модулей хотите объединить в один дом, если нужен проект больше базовой модели</li>
+                  <li>Регион и базовые данные по участку</li>
+                  <li>Пожелания по интерьеру, балкону, остеклению и климатическому пакету</li>
+                </ul>
+              </article>
+            </div>
+
+            <article class="form-card" id="request-form" data-reveal>
+              <span class="eyebrow">Форма заявки</span>
+              <h3>Расскажите, какой дом вам нужен</h3>
+              <p>Чем подробнее вводные, тем быстрее мы сможем подобрать подходящую модель и предложить нужную конфигурацию из одного или нескольких модулей.</p>
+              <form class="form-grid" data-demo-form>
+                <div class="form-grid form-grid--two">
+                  <div class="field">
+                    <label for="name">Имя</label>
+                    <input id="name" name="name" type="text" placeholder="Ваше имя" required />
+                  </div>
+                  <div class="field">
+                    <label for="phone">Телефон</label>
+                    <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required />
+                  </div>
+                </div>
+
+                <div class="form-grid form-grid--two">
+                  <div class="field">
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="email" placeholder="Ваш email" />
+                  </div>
+                  <div class="field">
+                    <label for="model">Интересующая модель</label>
+                    <select id="model" name="model">
+                      <option>Vista 28 / E5</option>
+                      <option>Balance 30 / E6</option>
+                      <option>Residence 38 / E7</option>
+                      <option>Нужна консультация</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label for="message">Комментарий</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Укажите регион, участок, желаемую площадь, формат проживания и любые пожелания по комплектации"
+                  ></textarea>
+                </div>
+
+                <p class="form-note">После отправки откроется Telegram с уже заполненным сообщением.</p>
+
+                <button class="btn btn--dark" type="submit">Отправить в Telegram</button>
+                <div class="form-success">Сообщение подготовлено. Откроется Telegram с заполненной заявкой, где останется только отправить ее.</div>
+              </form>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <div class="container footer-grid">
+          <div class="footer-copy">
+            <a class="brand" href="./index.html">
+              <span class="brand-mark">MH</span>
+              <span class="brand-copy">
+                <strong>Modular Houses</strong>
+                <span>Частные дома</span>
+              </span>
+            </a>
+            <p>Свяжитесь с нами удобным способом, и мы поможем выбрать модель и комплектацию дома под ваш участок.</p>
+            <div class="footer-meta">
+              <span>© <span data-current-year></span></span>
+              <span><a href="mailto:larion4ik1999@gmail.com">larion4ik1999@gmail.com</a></span>
+              <span><a href="tel:+79998885566">+7 999 888 5566</a></span>
+            </div>
+          </div>
+          <div class="footer-links">
+            <a href="./catalog.html">Каталог</a>
+            <a href="./technologies.html">Технологии</a>
+            <a href="./complectation.html">Комплектация</a>
+            <a href="./faq.html">FAQ</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

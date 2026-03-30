@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" fill="none">
+  <defs>
+    <linearGradient id="mhOuter" x1="8" y1="16" x2="62" y2="78" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#69727F"/>
+      <stop offset="0.48" stop-color="#2D333C"/>
+      <stop offset="1" stop-color="#11151B"/>
+    </linearGradient>
+    <linearGradient id="mhInner" x1="30" y1="24" x2="76" y2="84" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F7F8FA"/>
+      <stop offset="0.48" stop-color="#D7DCE4"/>
+      <stop offset="1" stop-color="#9098A5"/>
+    </linearGradient>
+    <linearGradient id="mhAccent" x1="63" y1="47" x2="88" y2="70" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF5A4"/>
+      <stop offset="1" stop-color="#D8D560"/>
+    </linearGradient>
+  </defs>
+  <path
+    d="M10 72V36.8L47 16L63 24.8L33.8 42V60H24.8V43.6L18.5 47.2V72H10Z"
+    fill="url(#mhOuter)"
+    stroke="#0B0F14"
+    stroke-opacity=".55"
+    stroke-width="1.4"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M38 72V48.5L60.7 34.8L74 42.2V72H65V47.2L55.5 52.8V72H47V56.6L46.3 57.1V72H38Z"
+    fill="url(#mhInner)"
+    stroke="#5E6470"
+    stroke-opacity=".65"
+    stroke-width="1.2"
+    stroke-linejoin="round"
+  />
+  <path
+    d="M74 72V43.3L86 50.1V72H74Z"
+    fill="url(#mhAccent)"
+    fill-opacity=".9"
+    stroke="#7A7340"
+    stroke-opacity=".45"
+    stroke-width="1.1"
+    stroke-linejoin="round"
+  />
+  <path d="M10 72H52" stroke="#0B0F14" stroke-opacity=".45" stroke-width="2.4" stroke-linecap="round"/>
+  <path d="M66 72H86" stroke="#0B0F14" stroke-opacity=".45" stroke-width="2.4" stroke-linecap="round"/>
+</svg>

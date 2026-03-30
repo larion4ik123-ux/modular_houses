@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="outer" x1="6" y1="10" x2="38" y2="50" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#8B95A2"/>
+      <stop offset=".45" stop-color="#39414C"/>
+      <stop offset="1" stop-color="#151A20"/>
+    </linearGradient>
+    <linearGradient id="inner" x1="22" y1="15" x2="50" y2="56" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FCFCFD"/>
+      <stop offset=".52" stop-color="#D5DAE2"/>
+      <stop offset="1" stop-color="#8F98A6"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="43" y1="31" x2="58" y2="48" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF4A2"/>
+      <stop offset="1" stop-color="#D8D361"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="18" fill="#181B21"/>
+  <path d="M8 49.5V25.5L31.6 12.5L41.6 18L23 29.1V40.5H17.4V29.9L13.6 32V49.5H8Z" fill="url(#outer)"/>
+  <path d="M26 49.5V34.1L40.6 25.1L49 29.8V49.5H43.2V33L37.1 36.6V49.5H31.6V39.1L31.1 39.4V49.5H26Z" fill="url(#inner)"/>
+  <path d="M49 49.5V30.4L56.2 34.4V49.5H49Z" fill="url(#accent)"/>
+  <path d="M8 49.5H34.5" stroke="#050608" stroke-opacity=".45" stroke-width="1.6" stroke-linecap="round"/>
+  <path d="M44.5 49.5H56" stroke="#050608" stroke-opacity=".45" stroke-width="1.6" stroke-linecap="round"/>
+</svg>
