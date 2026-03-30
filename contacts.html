@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Контакты Modular Houses: телефон, email, Telegram и форма связи для подбора модели модульного дома."
+      content="Контакты Modular Houses: телефон, email, Telegram и форма заявки для подбора модульного дома."
     />
     <title>Контакты — Modular Houses</title>
     <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
@@ -37,7 +37,7 @@
               <a href="./faq.html">FAQ</a>
             </nav>
             <div class="header-actions">
-              <button class="btn btn--line" type="button" data-copy-phone="+7 999 888 5566">Позвонить</button>
+              <button class="btn btn--line" type="button" data-copy-phone="+7 961 585-65-21">Позвонить</button>
               <a class="btn btn--dark" href="#request-form">Оставить заявку</a>
             </div>
           </div>
@@ -55,9 +55,9 @@
               <span class="eyebrow">Связаться с нами</span>
               <h1 class="page-title">Оставьте заявку, и мы подберем дом под ваш участок</h1>
               <p class="lead">
-                Самый быстрый путь — отправить нам вводные по участку, площади и желаемому формату проживания. Если
-                уже есть понравившаяся модель, просто укажите ее в форме. Если нужен дом больше базовой версии, сразу
-                напишите, сколько модулей хотите объединить в один проект.
+                Укажи базовые вводные по участку, площади и формату проживания. Если уже нравится конкретная модель,
+                отметь ее в форме. Если нужен дом больше базовой версии, сразу напиши, сколько модулей хочешь
+                объединить в один проект.
               </p>
             </div>
 
@@ -77,15 +77,15 @@
               <article class="contact-card" data-reveal>
                 <span class="eyebrow">Прямые контакты</span>
                 <h3>Быстрое общение</h3>
-                <p>Если удобно обсудить проект сразу, используйте любой из каналов ниже. Мы работаем с частными запросами по всей России.</p>
+                <p>Если удобнее написать сразу, используй один из каналов ниже. Мы работаем с частными клиентами по всей России.</p>
                 <div class="contact-cards">
-                  <a class="contact-link" href="tel:+79998885566">
-                    <strong>+7 999 888 5566</strong>
+                  <a class="contact-link" href="tel:+79615856521">
+                    <strong>+7 961 585-65-21</strong>
                     <span>Телефон</span>
                   </a>
-                  <a class="contact-link" href="https://t.me/+79998885566">
-                    <strong>Telegram</strong>
-                    <span>Быстрый диалог</span>
+                  <a class="contact-link" href="https://t.me/luvlarion4ik">
+                    <strong>@luvlarion4ik</strong>
+                    <span>Telegram</span>
                   </a>
                   <a class="contact-link" href="mailto:larion4ik1999@gmail.com">
                     <strong>larion4ik1999@gmail.com</strong>
@@ -110,24 +110,48 @@
             <article class="form-card" id="request-form" data-reveal>
               <span class="eyebrow">Форма заявки</span>
               <h3>Расскажите, какой дом вам нужен</h3>
-              <p>Чем подробнее вводные, тем быстрее мы сможем подобрать подходящую модель и предложить нужную конфигурацию из одного или нескольких модулей.</p>
+              <p>Чем точнее вводные, тем быстрее получится подобрать модель, количество модулей и нужную комплектацию.</p>
               <form class="form-grid" data-demo-form>
                 <div class="form-grid form-grid--two">
                   <div class="field">
                     <label for="name">Имя</label>
-                    <input id="name" name="name" type="text" placeholder="Ваше имя" required />
+                    <input id="name" name="name" type="text" placeholder="Как к вам обращаться" autocomplete="name" required />
                   </div>
                   <div class="field">
                     <label for="phone">Телефон</label>
-                    <input id="phone" name="phone" type="tel" placeholder="+7 (___) ___-__-__" required />
+                    <input
+                      id="phone"
+                      name="phone"
+                      type="tel"
+                      placeholder="+7 961 585-65-21"
+                      autocomplete="tel"
+                      inputmode="tel"
+                      data-phone-input
+                      required
+                    />
                   </div>
                 </div>
 
                 <div class="form-grid form-grid--two">
                   <div class="field">
                     <label for="email">Email</label>
-                    <input id="email" name="email" type="email" placeholder="Ваш email" />
+                    <input
+                      id="email"
+                      name="email"
+                      type="email"
+                      placeholder="name@example.com"
+                      autocomplete="email"
+                      inputmode="email"
+                      spellcheck="false"
+                    />
                   </div>
+                  <div class="field">
+                    <label for="region">Регион</label>
+                    <input id="region" name="region" type="text" placeholder="Например, Сочи или Подмосковье" autocomplete="address-level1" />
+                  </div>
+                </div>
+
+                <div class="form-grid form-grid--two">
                   <div class="field">
                     <label for="model">Интересующая модель</label>
                     <select id="model" name="model">
@@ -137,6 +161,32 @@
                       <option>Нужна консультация</option>
                     </select>
                   </div>
+                  <div class="field">
+                    <label for="modules">Количество модулей</label>
+                    <select id="modules" name="modules">
+                      <option>1 модуль</option>
+                      <option>2 модуля</option>
+                      <option>3 модуля</option>
+                      <option>4+ модулей</option>
+                      <option>Нужна консультация</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="form-grid form-grid--two">
+                  <div class="field">
+                    <label for="use_case">Формат проживания</label>
+                    <select id="use_case" name="use_case">
+                      <option>Для себя</option>
+                      <option>Для гостей</option>
+                      <option>Для сезонного отдыха</option>
+                      <option>Для долгого проживания</option>
+                    </select>
+                  </div>
+                  <div class="field">
+                    <label for="area">Желаемая площадь</label>
+                    <input id="area" name="area" type="text" placeholder="Например, 38–45 м²" inputmode="text" />
+                  </div>
                 </div>
 
                 <div class="field">
@@ -144,11 +194,11 @@
                   <textarea
                     id="message"
                     name="message"
-                    placeholder="Укажите регион, участок, желаемую площадь, формат проживания и любые пожелания по комплектации"
+                    placeholder="Можно указать участок, примерный бюджет, пожелания по остеклению, балкону, интерьеру и срокам"
                   ></textarea>
                 </div>
 
-                <p class="form-note">После отправки откроется Telegram с уже заполненным сообщением.</p>
+                <p class="form-note">После нажатия откроется Telegram с готовым текстом заявки. Останется только нажать «Отправить».</p>
 
                 <button class="btn btn--dark" type="submit">Отправить в Telegram</button>
                 <div class="form-success">Сообщение подготовлено. Откроется Telegram с заполненной заявкой, где останется только отправить ее.</div>
@@ -168,11 +218,11 @@
                 <span>Частные дома</span>
               </span>
             </a>
-            <p>Свяжитесь с нами удобным способом, и мы поможем выбрать модель и комплектацию дома под ваш участок.</p>
+            <p>Свяжитесь с нами удобным способом, и мы поможем подобрать модель, количество модулей и комплектацию под ваш участок.</p>
             <div class="footer-meta">
               <span>© <span data-current-year></span></span>
               <span><a href="mailto:larion4ik1999@gmail.com">larion4ik1999@gmail.com</a></span>
-              <span><a href="tel:+79998885566">+7 999 888 5566</a></span>
+              <span><a href="tel:+79615856521">+7 961 585-65-21</a></span>
             </div>
           </div>
           <div class="footer-links">
