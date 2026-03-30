@@ -477,7 +477,7 @@ button {
 }
 
 .stat-strip {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin-top: auto;
 }
 
@@ -493,7 +493,7 @@ button {
 }
 
 .fact-grid {
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .section {
@@ -581,10 +581,12 @@ button {
 }
 
 .stat-card {
-  display: grid;
-  align-content: start;
-  gap: 12px;
-  min-height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 10px;
+  min-height: 0;
+  padding: 24px;
 }
 
 .section--dark .feature-card,
@@ -598,18 +600,20 @@ button {
 .fact-card strong,
 .compare-card strong {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   font-family: "Cormorant Garamond", serif;
-  font-size: 2rem;
-  line-height: 1;
+  font-size: clamp(1.75rem, 2.2vw, 2.15rem);
+  line-height: 1.06;
   font-weight: 600;
+  text-wrap: balance;
 }
 
 .stat-card span,
 .fact-card span,
 .compare-card span {
   color: var(--muted);
-  line-height: 1.7;
+  font-size: 0.98rem;
+  line-height: 1.62;
 }
 
 .feature-card .eyebrow,
@@ -737,6 +741,11 @@ button {
 
 .product-meta div,
 .fact-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: flex-start;
+  height: 100%;
   padding: 16px 18px;
   border-radius: 22px;
   background: rgba(255, 255, 255, 0.56);
@@ -746,7 +755,7 @@ button {
 .product-meta strong,
 .fact-card em {
   display: block;
-  margin-bottom: 6px;
+  margin-bottom: 0;
   color: var(--muted);
   font-size: 0.85rem;
   font-style: normal;
@@ -756,7 +765,18 @@ button {
 .product-meta span,
 .fact-card span {
   font-weight: 800;
-  line-height: 1.5;
+  line-height: 1.45;
+}
+
+.fact-card strong {
+  font-size: clamp(1.35rem, 1.8vw, 1.75rem);
+  line-height: 1.16;
+}
+
+.fact-card span {
+  font-size: 0.96rem;
+  font-weight: 600;
+  line-height: 1.58;
 }
 
 .editorial-copy {
@@ -1222,8 +1242,11 @@ button {
   .story-grid,
   .feature-grid,
   .fact-grid,
-  .stat-strip,
   .dark-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .stat-strip {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -1461,6 +1484,10 @@ button {
 
   .stat-card {
     min-height: 0;
+  }
+
+  .fact-card strong {
+    font-size: 1.5rem;
   }
 
   .product-body {
